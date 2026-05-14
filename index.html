@@ -6,31 +6,65 @@
     <title>Jin Xie | Research Data Scientist @ Google</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary-text: #333; --secondary-text: #666; --border-color: #efefef; }
+        :root {
+            --primary-text: #333;
+            --secondary-text: #666;
+            --border-color: #efefef;
+        }
+
         * { box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: #fff; color: var(--primary-text); margin: 0; padding: 0; line-height: 1.6; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff;
+            color: var(--primary-text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6; /* 增加行高，提升阅读感 */
+        }
+
         a { color: #1a73e8; text-decoration: none; transition: 0.2s; border-bottom: 1px solid transparent; }
         a:hover { border-bottom: 1px solid #1a73e8; }
 
+        /* 布局 */
         .wrapper { display: flex; max-width: 1050px; margin: 0 auto; padding: 80px 40px; }
         .sidebar { flex: 0 0 260px; position: sticky; top: 80px; height: fit-content; }
         .profile-img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; margin-bottom: 25px; border: 1px solid #eee; }
         .name { font-size: 2.2rem; font-weight: 700; margin: 0 0 10px 0; color: #000; }
-        .info-item { font-size: 0.95rem; margin-bottom: 8px; color: var(--secondary-text); }
+        
+        /* 左侧边栏字体大小 0.95rem */
+        .info-item { font-size: 0.95rem; margin-bottom: 8px; color: var(--secondary-text); font-weight: 400; }
         .social-links { margin-top: 30px; }
         .social-links a { display: block; margin-bottom: 10px; font-size: 0.95rem; color: var(--secondary-text); }
 
+        /* 右侧主体：字体改小、改细 */
         .main-content { flex: 1; padding-left: 60px; }
         section { margin-bottom: 60px; }
-        h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 25px; padding-bottom: 8px; border-bottom: 1px solid var(--border-color); color: #000; }
-        p { margin-bottom: 18px; font-size: 1.05rem; }
+        
+        h2 { 
+            font-size: 1.4rem; 
+            font-weight: 700; 
+            margin-bottom: 25px; 
+            padding-bottom: 8px; 
+            border-bottom: 1px solid var(--border-color); 
+            color: #000; 
+        }
 
+        /* 主体段落：0.95rem, 权重 400 (细) */
+        p { 
+            margin-bottom: 18px; 
+            font-size: 0.95rem; 
+            font-weight: 400; 
+            color: var(--primary-text);
+            text-align: justify;
+        }
+
+        /* 列表项字体同步缩小 */
         .item { margin-bottom: 25px; }
-        .item-title { display: block; font-weight: 600; font-size: 1.1rem; margin-bottom: 4px; }
-        .item-meta { font-size: 0.95rem; color: var(--secondary-text); }
+        .item-title { display: block; font-weight: 600; font-size: 1rem; margin-bottom: 4px; color: #000; }
+        .item-meta { font-size: 0.9rem; color: var(--secondary-text); font-weight: 400; }
         .me { font-weight: 700; text-decoration: underline; color: #000; }
         
-        .news-item { display: flex; margin-bottom: 15px; font-size: 0.95rem; }
+        .news-item { display: flex; margin-bottom: 15px; font-size: 0.9rem; font-weight: 400; }
         .news-date { min-width: 90px; font-weight: 600; color: #888; }
 
         @media (max-width: 900px) {
@@ -61,14 +95,18 @@
 
         <main class="main-content">
             
-            <section id="biography">
-                <h2>Biography</h2>
+            <section id="about">
+                <h2>About</h2>
                 <p>
                     I am a <b>Research Data Scientist at Google (Core ML Data)</b>. I am a core contributor to the <b>Google Gemini</b> team, where I focus on LLM post-training, frontier safety, and automated evaluation quality. 
                 </p>
                 <p>
                     Recently, I led the evaluation data quality and automated loss analysis for the <b>Gemini 2.5 and 3.0</b> launches, improving model performance on long-context financial understanding and refactoring safety auto-rater pipelines. My work on real-time noise identification in LLM ratings was awarded the <b>2026 DeepMind Data Science Breakthrough Team Award</b>.
                 </p>
+                <div class="news-item">
+                    <span class="news-date">2026.05</span>
+                    <span>Received the <b>DeepMind Data Science Breakthrough Team Award</b>.</span>
+                </div>
             </section>
 
             <section id="education">
@@ -90,7 +128,7 @@
                 <div class="item">
                     <span class="item-title">Google (Core ML Data)</span>
                     <span class="item-meta">Research Data Scientist | <i>Jan 2025 - Present</i></span>
-                    <span class="item-meta">Working on Gemini post-training evaluation, Frontier Safety (L1 autoraters), and automated loss pattern analysis.</span>
+                    <span class="item-meta">Gemini post-training evaluation, Frontier Safety (L1 autoraters), and automated loss pattern analysis.</span>
                 </div>
                 <div class="item">
                     <span class="item-title">Grail, LLC</span>
@@ -124,10 +162,6 @@
                     <span class="item-title">Asymptotic Analysis of the Profile Function in Distributionally Robust Optimization</span>
                     <span class="item-meta"><span class="me">Jin Xie</span>, Jose Blanchet, Peter Glynn | <i>Submitted to AAAI, 2023+</i></span>
                 </div>
-                <div class="item">
-                    <span class="item-title">Surgical Scheduling via Optimal Transport</span>
-                    <span class="item-meta"><span class="me">Jin Xie</span>, et al. | <i>To be submitted to Operations Research, 2024+</i></span>
-                </div>
             </section>
 
             <section id="honors">
@@ -148,18 +182,13 @@
                     <span class="item-title">First Prize in National College Student Physics Olympics Competition, China</span>
                     <span class="item-meta">2014</span>
                 </div>
-                <div class="item">
-                    <span class="item-title">National Innovation Research Funding for Undergraduate</span>
-                    <span class="item-meta">2015</span>
-                </div>
             </section>
 
             <section id="teaching">
                 <h2>Teaching</h2>
                 <div class="item">
                     <span class="item-title">Graduate Teaching Assistant</span>
-                    <span class="item-meta">Stanford University</span>
-                    <span class="item-meta">Assisted in courses: Optimization, Advanced Topics in Reinforcement Learning, Numerical Linear Algebra.</span>
+                    <span class="item-meta">Stanford University | Optimization, Reinforcement Learning, Numerical Linear Algebra.</span>
                 </div>
             </section>
 
@@ -170,10 +199,8 @@
                     <span class="item-meta">Management Science, NeurIPS, AISTATS, IEEE CDC, IEEE MIPR, DTM.</span>
                 </div>
                 <div class="item">
-                    <span class="item-title">Leadership Roles</span>
-                    <span class="item-meta">President, SIAM Student Chapter, Stanford University</span>
-                    <span class="item-meta">VP, Stanford Chinese Entrepreneur Organization (CEO)</span>
-                    <span class="item-meta">Board Member, Women in Computational Sciences and Engineering, Stanford</span>
+                    <span class="item-title">Leadership</span>
+                    <span class="item-meta">President, SIAM Stanford; VP, Stanford CEO; Board Member, Women in CSE @ Stanford.</span>
                 </div>
             </section>
 
