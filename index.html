@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jin Xie | Research Data Scientist</title>
+    <title>Jin Xie | Research Data Scientist @ Google</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root { --primary-text: #333; --secondary-text: #666; --border-color: #efefef; }
         * { box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background-color: #fff; color: var(--primary-text); margin: 0; padding: 0; line-height: 1.6; }
-        a { color: #1a73e8; text-decoration: none; transition: 0.2s; }
-        a:hover { text-decoration: underline; }
+        a { color: #1a73e8; text-decoration: none; transition: 0.2s; border-bottom: 1px solid transparent; }
+        a:hover { border-bottom: 1px solid #1a73e8; }
 
         .wrapper { display: flex; max-width: 1050px; margin: 0 auto; padding: 80px 40px; }
         .sidebar { flex: 0 0 260px; position: sticky; top: 80px; height: fit-content; }
@@ -28,7 +28,10 @@
         .item { margin-bottom: 25px; }
         .item-title { display: block; font-weight: 600; font-size: 1.1rem; margin-bottom: 4px; }
         .item-meta { font-size: 0.95rem; color: var(--secondary-text); }
-        .me { font-weight: 700; text-decoration: underline; }
+        .me { font-weight: 700; text-decoration: underline; color: #000; }
+        
+        .news-item { display: flex; margin-bottom: 15px; font-size: 0.95rem; }
+        .news-date { min-width: 90px; font-weight: 600; color: #888; }
 
         @media (max-width: 900px) {
             .wrapper { flex-direction: column; padding: 40px 20px; }
@@ -44,7 +47,7 @@
             <img src="profile.jpg" alt="Jin Xie" class="profile-img">
             <h1 class="name">Jin Xie</h1>
             <div class="info-item">Research Data Scientist</div>
-            <div class="info-item"><b>OpenAI</b></div>
+            <div class="info-item"><b>Google, Core ML Data</b></div>
             <div class="info-item" style="margin-top: 15px;">Ph.D. in Computational Math</div>
             <div class="info-item">Stanford University</div>
             
@@ -52,7 +55,7 @@
                 <a href="mailto:jinnyxie1024@gmail.com">📩 Email</a>
                 <a href="https://www.linkedin.com/in/jin-x-697a3b129/">🔗 LinkedIn</a>
                 <a href="https://github.com/jinnyxie1024">💻 GitHub</a>
-                <a href="#">🎓 Google Scholar</a>
+                <a href="https://scholar.google.com/citations?user=A2MI0scAAAAJ&hl=en">🎓 Scholar</a>
             </div>
         </aside>
 
@@ -61,10 +64,10 @@
             <section id="biography">
                 <h2>Biography</h2>
                 <p>
-                    I am a Research Data Scientist at <b>OpenAI</b>. Previously, I was a core contributor to the <b>Google Gemini</b> team (Core ML Data), where I worked on <b>Gemini 2.5 and 3.0</b>. My research focuses on improving data and model quality for Large Language Models (LLMs), with specific expertise in RLHF, automated evaluation, and model safety.
+                    I am a <b>Research Data Scientist at Google (Core ML Data)</b>. I am a core contributor to the <b>Google Gemini</b> team, where I focus on LLM post-training, frontier safety, and automated evaluation quality. 
                 </p>
                 <p>
-                    I recently led projects involving long-context PDF understanding and frontier safety misuse detection for the Gemini 2.5 Pro launch. My work has been recognized with the 2026 DeepMind Data Science Breakthrough Team Award.
+                    Recently, I led the evaluation data quality and automated loss analysis for the <b>Gemini 2.5 and 3.0</b> launches, improving model performance on long-context financial understanding and refactoring safety auto-rater pipelines. My work on real-time noise identification in LLM ratings was awarded the <b>2026 DeepMind Data Science Breakthrough Team Award</b>.
                 </p>
             </section>
 
@@ -72,7 +75,120 @@
                 <h2>Education</h2>
                 <div class="item">
                     <span class="item-title">Stanford University</span>
-                    <span class="item-meta">Ph.D. in Computational Mathematics, GPA: 3.97/4.3 | <i>2016 - 2021</i></span>
+                    <span class="item-meta">Ph.D. in Computational Mathematics, GPA: 3.97/4.3 | <i>Sep 2016 - Dec 2021</i></span>
                     <span class="item-meta">Advisors: Prof. Peter Glynn, Prof. Jose Blanchet</span>
                 </div>
                 <div class="item">
+                    <span class="item-title">Peking University</span>
+                    <span class="item-meta">B.S. in Applied Mathematics, GPA: 3.78/4.0 | <i>Sep 2012 - Jul 2016</i></span>
+                    <span class="item-meta">Double Major in Economics</span>
+                </div>
+            </section>
+
+            <section id="experiences">
+                <h2>Experiences</h2>
+                <div class="item">
+                    <span class="item-title">Google (Core ML Data)</span>
+                    <span class="item-meta">Research Data Scientist | <i>Jan 2025 - Present</i></span>
+                    <span class="item-meta">Working on Gemini post-training evaluation, Frontier Safety (L1 autoraters), and automated loss pattern analysis.</span>
+                </div>
+                <div class="item">
+                    <span class="item-title">Grail, LLC</span>
+                    <span class="item-meta">Machine Learning Scientist | <i>2022 - 2024</i></span>
+                </div>
+                <div class="item">
+                    <span class="item-title">Uber Technologies</span>
+                    <span class="item-meta">Data Scientist, Driver Pricing | <i>2021 - 2022</i></span>
+                </div>
+                <div class="item">
+                    <span class="item-title">Facebook Research</span>
+                    <span class="item-meta">Research Intern, Core Data Science | <i>2020</i></span>
+                </div>
+            </section>
+
+            <section id="publications">
+                <h2>Publications</h2>
+                <div class="item">
+                    <span class="item-title">Gemini 2.5: Pushing the frontier with advanced reasoning, multimodality, long context, and next generation agentic capabilities</span>
+                    <span class="item-meta">Google Gemini Team (incl. <span class="me">Jin Xie</span>) | <i>arXiv, 2025</i></span>
+                </div>
+                <div class="item">
+                    <span class="item-title">A model to estimate bed demand for COVID-19 related hospitalization</span>
+                    <span class="item-meta">T Zhang, K McFarlane, J Vallon, L Yang, <span class="me">J Xie</span>, J Blanchet, P Glynn | <i>Health Management, Policy and Innovation, 2020</i></span>
+                </div>
+                <div class="item">
+                    <span class="item-title">The Design and Implementation of a Broadly Applicable Algorithm for Optimizing Intra-Day Surgical Scheduling</span>
+                    <span class="item-meta"><span class="me">J Xie</span>, T Zhang, JH Blanchet, PW Glynn, M Randolph, D Scheinker | <i>CORR / arXiv, 2022</i></span>
+                </div>
+                <div class="item">
+                    <span class="item-title">Asymptotic Analysis of the Profile Function in Distributionally Robust Optimization</span>
+                    <span class="item-meta"><span class="me">Jin Xie</span>, Jose Blanchet, Peter Glynn | <i>Submitted to AAAI, 2023+</i></span>
+                </div>
+                <div class="item">
+                    <span class="item-title">Surgical Scheduling via Optimal Transport</span>
+                    <span class="item-meta"><span class="me">Jin Xie</span>, et al. | <i>To be submitted to Operations Research, 2024+</i></span>
+                </div>
+            </section>
+
+            <section id="honors">
+                <h2>Honors & Awards</h2>
+                <div class="item">
+                    <span class="item-title">DeepMind Data Science Breakthrough Team Award</span>
+                    <span class="item-meta">Google, 2026</span>
+                </div>
+                <div class="item">
+                    <span class="item-title">First Place in Stanford Citadel Datathon</span>
+                    <span class="item-meta">Top 1% of candidates, 2019</span>
+                </div>
+                <div class="item">
+                    <span class="item-title">Bronze Medal in the Sixth S.T.Yau College Student Mathematics Contest</span>
+                    <span class="item-meta">Top 1% of candidates, 2016</span>
+                </div>
+                <div class="item">
+                    <span class="item-title">First Prize in National College Student Physics Olympics Competition, China</span>
+                    <span class="item-meta">2014</span>
+                </div>
+                <div class="item">
+                    <span class="item-title">National Innovation Research Funding for Undergraduate</span>
+                    <span class="item-meta">2015</span>
+                </div>
+            </section>
+
+            <section id="teaching">
+                <h2>Teaching</h2>
+                <div class="item">
+                    <span class="item-title">Graduate Teaching Assistant</span>
+                    <span class="item-meta">Stanford University</span>
+                    <span class="item-meta">Assisted in courses: Optimization, Advanced Topics in Reinforcement Learning, Numerical Linear Algebra.</span>
+                </div>
+            </section>
+
+            <section id="services">
+                <h2>Academic Services</h2>
+                <div class="item">
+                    <span class="item-title">Reviewer</span>
+                    <span class="item-meta">Management Science, NeurIPS, AISTATS, IEEE CDC, IEEE MIPR, DTM.</span>
+                </div>
+                <div class="item">
+                    <span class="item-title">Leadership Roles</span>
+                    <span class="item-meta">President, SIAM Student Chapter, Stanford University</span>
+                    <span class="item-meta">VP, Stanford Chinese Entrepreneur Organization (CEO)</span>
+                    <span class="item-meta">Board Member, Women in Computational Sciences and Engineering, Stanford</span>
+                </div>
+            </section>
+
+            <section id="misc">
+                <h2>Misc</h2>
+                <p>
+                    I am a professional-level <b>Guzheng performer</b> (reaching 10th/performance grade) and served as Vice President of the <b>Stanford Oriental Zither & Qin Association</b>.
+                </p>
+                <p>
+                    I am also an advanced <b>skier</b> (double black diamond level) and maintain a rigorous daily training regimen in <b>ballet</b>, swimming, and yoga.
+                </p>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
