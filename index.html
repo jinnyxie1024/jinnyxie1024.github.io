@@ -24,8 +24,9 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        .wrapper { max-width: 950px; margin: 0 auto; padding: 60px 40px; }
+        .wrapper { max-width: 900px; margin: 0 auto; padding: 80px 40px; }
         
+        /* Header section */
         .header-section {
             display: flex;
             align-items: center;
@@ -44,76 +45,69 @@
             border: 1px solid #f9f9f9; 
         }
 
-        .name { font-size: 2.2rem; font-weight: 600; margin: 0 0 10px 0; color: #000; letter-spacing: -0.02em; }
-        .sub-name { font-size: 1.1rem; color: #666; margin-bottom: 15px; font-weight: 400; }
+        .name { font-size: 2rem; font-weight: 600; margin: 0 0 15px 0; color: #000; letter-spacing: -0.02em; }
         
+        /* Blue Links */
         a { color: var(--link-blue); text-decoration: none; }
         a:hover { text-decoration: underline; }
 
         .intro-p { 
-            font-size: 0.9rem; 
+            font-size: 0.88rem; 
             font-weight: 300; 
             color: #444; 
-            margin-bottom: 12px;
-            max-width: 650px;
+            margin-bottom: 15px;
+            max-width: 700px;
+            text-align: justify;
         }
 
-        .link-bar { font-size: 0.85rem; font-weight: 400; margin-top: 20px; }
-        .link-bar span { color: #ddd; margin: 0 8px; font-weight: 300; }
+        .role-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #000;
+            display: block;
+        }
 
-        section { margin-bottom: 50px; }
+        /* Link bar */
+        .link-bar { font-size: 0.85rem; font-weight: 400; margin-top: 18px; }
+        .link-bar span { color: #ddd; margin: 0 6px; font-weight: 300; }
+
+        /* Main Content */
+        section { margin-bottom: 45px; }
         h2 { 
-            font-size: 1.1rem; 
+            font-size: 1rem; 
             font-weight: 600; 
-            margin-bottom: 20px; 
-            padding-bottom: 8px; 
+            margin-bottom: 15px; 
+            padding-bottom: 5px; 
             border-bottom: 1px solid var(--border-color); 
             color: #000; 
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
         }
 
-        p { font-size: 0.9rem; font-weight: 300; color: #444; margin-bottom: 15px; text-align: justify; }
-
-        .item { margin-bottom: 25px; }
-        .item-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
-        .item-title { font-weight: 600; font-size: 0.95rem; color: #000; }
-        .item-date { font-size: 0.85rem; color: #999; font-family: monospace; }
-        .item-meta { font-size: 0.88rem; color: #555; font-weight: 400; display: block; margin-bottom: 5px; }
-        .item-desc { font-size: 0.85rem; color: #666; font-weight: 300; margin: 0; padding-left: 15px; border-left: 2px solid #f0f0f0; }
-        
+        .item { margin-bottom: 18px; }
+        .item-title { display: block; font-weight: 500; font-size: 0.9rem; margin-bottom: 2px; color: #000; }
+        .item-meta { font-size: 0.82rem; color: var(--secondary-text); font-weight: 300; }
         .me { font-weight: 600; text-decoration: underline; color: #000; }
         
         .news-list { list-style: none; padding: 0; }
-        .news-item { display: flex; margin-bottom: 10px; font-size: 0.88rem; font-weight: 300; color: #444; }
-        .news-date { min-width: 90px; font-weight: 600; color: #1a73e8; }
+        .news-item { display: flex; margin-bottom: 8px; font-size: 0.85rem; font-weight: 300; color: #444; }
+        .news-date { min-width: 85px; font-weight: 500; color: #999; font-family: monospace; }
 
-        .edu-container { display: flex; align-items: flex-start; gap: 40px; }
+        .edu-container { display: flex; align-items: flex-start; gap: 30px; }
         .edu-list { flex: 1; }
         .academic-tree { 
-            flex: 0 0 380px; 
-            width: 380px;
-            border-radius: 8px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            flex: 0 0 450px; 
+            width: 450px;
+            border: 1px solid #f7f7f7; 
+            border-radius: 4px; 
+            padding: 4px; 
+            background: #fff;
         }
 
-        .skill-tag {
-            display: inline-block;
-            background: #f8f9fa;
-            padding: 2px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            color: #555;
-            margin: 0 5px 5px 0;
-            border: 1px solid #eee;
-        }
-
-        @media (max-width: 850px) {
+        @media (max-width: 800px) {
             .header-section { flex-direction: column-reverse; text-align: center; }
             .header-text { padding-right: 0; margin-top: 30px; }
             .edu-container { flex-direction: column; }
-            .academic-tree { align-self: center; width: 100%; max-width: 400px; }
-            .item-header { flex-direction: column; }
+            .academic-tree { align-self: center; margin-top: 20px; }
         }
     </style>
 </head>
@@ -123,21 +117,37 @@
         <header class="header-section">
             <div class="header-text">
                 <h1 class="name">Jin Xie</h1>
-                <div class="sub-name">Research Data Scientist @ Google Core ML Data</div>
+                <span class="role-title">Research Data Scientist @ <a href="https://about.google/">Google</a> Core ML AI Data [cite: 31, 32]</span>
+                
                 <p class="intro-p">
-                    I am a Research Data Scientist at <b>Google</b> (Core ML Data Hub), focusing on improving data quality, model quality, and infrastructure for LLM teams across Google. I am a core contributor to <b>Gemini 2.5/3.0</b> post-training and frontier safety.
+                    I am a Research Data Scientist at <a href="https://about.google/">Google</a> (Core ML Data), focusing on <b>Gemini</b> post-training, frontier safety, and automated evaluation frameworks[cite: 35]. I am a core contributor to Gemini 2.5 post-training and frontier safety research at <a href="https://about.google/">Google</a>[cite: 38].
                 </p>
+
                 <p class="intro-p">
-                    I earned my <b>Ph.D. in Computational Mathematics from Stanford University</b> (GPA: 3.97/4.3), advised by <a href="https://profiles.stanford.edu/peter-glynn">Peter Glynn</a> and <a href="https://profiles.stanford.edu/jose-blanchet">Jose Blanchet</a>.
+                    Previously, I held research and data roles at <a href="https://research.facebook.com/">Facebook Research</a> [cite: 55, 57], <a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a> [cite: 73, 74], <a href="https://grail.com/">Grail (IPO 2024)</a> [cite: 41, 45], <a href="https://www.uber.com/">Uber</a> [cite: 48, 50], and <a href="https://medicine.stanford.edu/">Stanford School of Medicine</a>[cite: 60, 62].
+                </p>
+
+                <p class="intro-p">
+                    I earned my Ph.D. in Computational Mathematics from <a href="https://www.stanford.edu/">Stanford University</a>, where I was advised by <a href="https://profiles.stanford.edu/peter-glynn">Prof. Peter Glynn</a> and <a href="https://profiles.stanford.edu/jose-blanchet">Prof. Jose Blanchet</a>[cite: 11, 12, 13]. I did research in earlier years in quantum chemistry and HPC with <a href="https://math.berkeley.edu/~linlin/">Prof. Lin Lin</a> (<a href="https://www.berkeley.edu/">UC Berkeley</a>) and <a href="http://www.math.pku.edu.cn/people/fanhj/">Prof. Huijun Fan</a> (<a href="https://www.pku.edu.cn/">Peking University</a>)[cite: 17, 18, 83].
+                </p>
+
+                <p class="intro-p">
+                    My research sits on the intersection of frontier GenAI safety, post-training, and evaluation[cite: 152]. I focus on building methods that make next-generation AI systems safer, more reliable, and more useful in real-world deployment[cite: 39]. Before moving into LLM safety and evaluation, I spent nearly a decade building AI models for high-impact healthcare applications, including healthcare management and early cancer detection[cite: 26, 46, 65].
+                </p>
+
+                <p class="intro-p">
+                    I’m always open to new perspectives and potential collaborations. Whether you're a student looking for mentorship or a fellow researcher hoping to dive into technical discussions, feel free to book a 15-minute virtual coffee via the <a href="https://calendly.com/jinnyxie1024/15min">Calendly link</a>.
                 </p>
                 
                 <div class="link-bar">
                     <a href="mailto:jinnyxie1024@gmail.com">Email</a><span>/</span>
                     <a href="Jin_Xie_Resume.pdf">CV</a><span>/</span>
-                    <a href="https://scholar.google.com/citations?user=A2MI0scAAAAJ&hl=en">Google Scholar</a><span>/</span>
+                    <a href="https://scholar.google.com/citations?user=A2MI0scAAAAJ&hl=en">Scholar</a><span>/</span>
                     <a href="https://www.linkedin.com/in/jin-x-697a3b129/">LinkedIn</a><span>/</span>
                     <a href="https://github.com/jinnyxie1024">GitHub</a><span>/</span>
-                    <a href="https://www.youtube.com/@jinnyx4496">YouTube</a>
+                    <a href="https://www.youtube.com/@jinnyx4496">YouTube</a><span>/</span>
+                    <a href="https://x.com/JinnyX13">X (Twitter)</a><span>/</span>
+                    <a href="https://medium.com/@jinnyxie1024">Blog</a>
                 </div>
             </div>
             <div class="header-img">
@@ -146,142 +156,23 @@
         </header>
 
         <main class="main-content">
-            
-            <section id="news">
-                <h2>News</h2>
-                <ul class="news-list">
-                    <li class="news-item"><span class="news-date">[2026.05]</span> Awarded the <b>DeepMind Data Science Breakthrough Team Award</b> for Prompt Bank & Post-train Eval Refactor.</li>
-                    <li class="news-item"><span class="news-date">[2025.07]</span> <b>Gemini 2.5</b> launch: Acknowledged as Core Contributor for Multimodal Long Context PDF understanding.</li>
-                    <li class="news-item"><span class="news-date">[2025.04]</span> Presented <b>Automated Loss Pattern Analyzer</b> demo at Google DataVerse Summit 2025.</li>
-                </ul>
-            </section>
-
-            <section id="experiences">
-                <h2>Working Experiences</h2>
-                
-                <div class="item">
-                    <div class="item-header">
-                        <span class="item-title">Google, Core ML Data</span>
-                        <span class="item-date">Jan 2025 - Present</span>
-                    </div>
-                    <span class="item-meta">Research Data Scientist | Mountain View, CA</span>
-                    <div class="item-desc">
-                        • <b>Gemini Post-training & Eval:</b> Core contributor for long-context PDF understanding (Gemini 2.5 Pro). Improved Flash performance from 54.4% to 66.5% and Pro to 81.6%.<br>
-                        • <b>Frontier Safety:</b> Developed high-efficiency L1 Autorater for misuse detection (96.9% recall); architected Dynamic Category Ranking Layer for agile safety updates.<br>
-                        • <b>Scalable Tooling:</b> Architected Automated Loss Pattern Analysis Tool (DataGen Loss Analyzer MVP) used across AI DS, GDM, and Cloud teams.
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="item-header">
-                        <span class="item-title">Grail, LLC</span>
-                        <span class="item-date">Dec 2022 - Oct 2024</span>
-                    </div>
-                    <span class="item-meta">Machine Learning Scientist | Menlo Park, CA</span>
-                    <div class="item-desc">
-                        • Developed multi-modal data fusion and classifier calibration for early cancer detection signals using the world’s richest biological datasets.<br>
-                        • Supported <b>Grail IPO (Nasdaq, June 2024)</b> through core machine learning contributions to signal predictors.
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="item-header">
-                        <span class="item-title">Uber Technologies</span>
-                        <span class="item-date">Nov 2021 - Dec 2022</span>
-                    </div>
-                    <span class="item-meta">Data Scientist, Driver Pricing | San Francisco, CA</span>
-                    <div class="item-desc">
-                        • Led marketplace-wide launch of algorithmic driver pricing to <b>75% of Uber's global business</b>, improving revenue by 4% in South American markets.
-                    </div>
-                </div>
-            </section>
-
             <section id="education">
                 <h2>Education</h2>
                 <div class="edu-container">
                     <div class="edu-list">
                         <div class="item">
-                            <div class="item-header">
-                                <span class="item-title">Stanford University</span>
-                                <span class="item-date">2016 - 2021</span>
-                            </div>
-                            <span class="item-meta">Ph.D. in Computational Mathematics | GPA: 3.97/4.3</span>
-                            <span class="item-desc">Ignite Program (Innovation & Entrepreneurship) at Graduate School of Business.</span>
+                            <span class="item-title"><a href="https://www.stanford.edu/">Stanford University</a></span>
+                            <span class="item-meta">Ph.D. in Computational Mathematics | 2016 - 2021 [cite: 11, 13]</span>
                         </div>
                         <div class="item">
-                            <div class="item-header">
-                                <span class="item-title">Peking University</span>
-                                <span class="item-date">2012 - 2016</span>
-                            </div>
-                            <span class="item-meta">B.S. in Applied Mathematics | Double Major in Economics</span>
-                            <span class="item-desc">School of Mathematical Sciences. Vice President, Teenage Volunteers Association.</span>
+                            <span class="item-title"><a href="https://www.pku.edu.cn/">Peking University</a></span>
+                            <span class="item-meta">B.S. in Applied Mathematics | 2012 - 2016 [cite: 18, 20]</span>
                         </div>
                     </div>
-                    <img src="tree.jpg" alt="Academic Tree" class="academic-tree">
+                    <img src="tree.gif" alt="Academic Tree" class="academic-tree">
                 </div>
             </section>
-
-            <section id="publications">
-                <h2>Selected Publications</h2>
-                <div class="item">
-                    <span class="item-title">Gemini 2.5: Pushing the frontier with advanced reasoning, multimodality, and next generation agentic capabilities</span>
-                    <span class="item-meta">Google Gemini Team (incl. <span class="me">Jin Xie</span>) | arXiv, 2025</span>
-                </div>
-                <div class="item">
-                    <span class="item-title">Surgical Scheduling via Optimal Transport</span>
-                    <span class="item-meta"><span class="me">Jin Xie</span>, et al. | Submitted to Operations Research, 2024+</span>
-                </div>
-                <div class="item">
-                    <span class="item-title">Asymptotic Analysis of the Profile Function in Distributionally Robust Optimization</span>
-                    <span class="item-meta"><span class="me">Jin Xie</span>, et al. | Submitted to AAAI, 2023+</span>
-                </div>
-                <div class="item">
-                    <span class="item-title">Optimal Transport and Healthcare Operations</span>
-                    <span class="item-meta"><span class="me">Jin Xie</span> | Ph.D. Thesis, Stanford University, 2022</span>
-                </div>
-            </section>
-
-            <section id="honors">
-                <h2>Honors & Awards</h2>
-                <div class="item" style="margin-bottom: 10px;">
-                    • <b>DeepMind Data Science Breakthrough Team Award</b>, Google, 2026<br>
-                    • <b>First Place</b>, Stanford Citadel Datathon (Top 1% of candidates), 2019<br>
-                    • <b>Bronze Medal</b>, 6th S.T.Yau College Student Mathematics Contest (Top 1%), 2016<br>
-                    • <b>Founder Scholarship</b>, Peking University (Top 5%), 2014<br>
-                    • <b>First Prize</b>, National College Student Physics Olympics (Top 1%), 2014<br>
-                    • <b>First Prize</b>, National Physics Olympics Competition (China, Top 1%), 2011
-                </div>
-            </section>
-
-            <section id="skills">
-                <h2>Technical Skills</h2>
-                <div>
-                    <span class="skill-tag">Python</span><span class="skill-tag">C/C++</span><span class="skill-tag">SQL</span><span class="skill-tag">Matlab</span>
-                    <span class="skill-tag">Tensorflow</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">LLM Evaluation</span>
-                    <span class="skill-tag">Reinforcement Learning</span><span class="skill-tag">Optimal Transport</span>
-                </div>
-            </section>
-
-            <section id="services">
-                <h2>Professional Services & Leadership</h2>
-                <p style="font-size: 0.85rem;">
-                    <b>Reviewer:</b> Management Science, NeurIPS, AISTATS, IEEE CDC, AAAI, Mathematical Programming.<br>
-                    <b>Leadership:</b> President, SIAM Student Chapter @ Stanford; VP of Business Development, Stanford CEO; Board Member, Women in CompSci (WICSE) @ Stanford; VP, Stanford Oriental Zither (Guzheng) Association.
-                </p>
-            </section>
-
-            <section id="misc">
-                <h2>Beyond Research</h2>
-                <p>
-                    I am a <b>Professional-level Guzheng (Oriental Zither) Performer</b> (achieved Performance Grade 10) and have been recognized in international music competitions. I am also an <b>Advanced Skier</b> (comfortable on double black diamond terrain) and maintain a daily discipline in ballet, swimming, and yoga. Currently, I am also exploring professional modeling through formal coursework.
-                </p>
-            </section>
-
         </main>
-        
-        <footer style="text-align: center; padding-top: 40px; border-top: 1px solid #f2f2f2; font-size: 0.8rem; color: #999;">
-            &copy; 2026 Jin Xie. Built with passion and precision.
-        </footer>
     </div>
 
 </body>
