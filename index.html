@@ -84,19 +84,23 @@
         .news-item { display: flex; margin-bottom: 8px; font-size: 0.85rem; font-weight: 300; color: #444; }
         .news-date { min-width: 85px; font-weight: 500; color: #999; font-family: monospace; }
 
-        /* 左右布局容器 (用于 Education) */
+        /* 左右布局容器 */
         .flex-container { display: flex; align-items: flex-start; gap: 30px; }
         .flex-list { flex: 1; }
         
-        /* 缩小到 1/4 的 Tree 样式 */
+        /* 再次缩小的微型 Tree 样式 (60px 宽度) */
         .academic-tree { 
-            flex: 0 0 120px; /* 1/2 宽度 = 1/4 面积 */
+            flex: 0 0 60px; 
+            width: 60px;
             border: 1px solid #f7f7f7; 
-            border-radius: 4px; 
-            padding: 4px; 
+            border-radius: 2px; 
+            padding: 2px; 
             background: #fff;
-            opacity: 0.9;
+            opacity: 0.8;
+            transition: transform 0.3s ease;
+            cursor: zoom-in;
         }
+        .academic-tree:hover { transform: scale(1.5); opacity: 1; } /* 鼠标悬停稍微放大一点点方便看 */
 
         @media (max-width: 800px) {
             .header-section { flex-direction: column-reverse; text-align: center; }
@@ -142,7 +146,7 @@
             <section id="about">
                 <h2>About</h2>
                 <p>
-                    My research focuses on the intersection of scale and safety for large language models. As a core contributor to <b>Gemini 2.5 and 3.0</b>, I lead automated loss pattern analysis and evaluation refactors. I received the <b>2026 DeepMind Data Science Breakthrough Team Award</b> for my work on real-time noise identification.
+                    My research focuses on the intersection of scale and safety for large language models. As a core contributor to <b>Gemini 2.5 and 3.0</b>, I lead automated loss pattern analysis and evaluation refactors. I was honored with the <b>2026 DeepMind Data Science Breakthrough Team Award</b> for my work on real-time noise identification.
                 </p>
             </section>
 
@@ -150,7 +154,7 @@
                 <h2>News</h2>
                 <ul class="news-list">
                     <li class="news-item"><span class="news-date">[2026.05]</span> Awarded the <b>DeepMind Data Science Breakthrough Team Award</b> at Google.</li>
-                    <li class="news-item"><span class="news-date">[2025.07]</span> <b>Gemini 2.5</b> released; led the post-training eval for long-context capabilities.</li>
+                    <li class="news-item"><span class="news-date">[2025.07]</span> <b>Gemini 2.5</b> released; led post-training evaluation for long-context financial understanding.</li>
                 </ul>
             </section>
 
@@ -167,7 +171,7 @@
                             <span class="item-meta">B.S. in Applied Mathematics | 2012 - 2016</span>
                         </div>
                     </div>
-                    <img src="tree.jpg" alt="Academic Tree" class="academic-tree">
+                    <img src="tree.gif" alt="Academic Tree" class="academic-tree">
                 </div>
             </section>
 
@@ -230,7 +234,7 @@
             <section id="misc">
                 <h2>Misc</h2>
                 <p>
-                    Professional <b>Guzheng performer</b> (10th grade). Advanced <b>skier</b> (double black diamond level). Practitioner of ballet, swimming, and yoga.
+                    Professional <b>Guzheng performer</b> (10th grade). Advanced <b>skier</b> (double black diamond level). I also enjoy ballet, swimming, and yoga.
                 </p>
             </section>
 
