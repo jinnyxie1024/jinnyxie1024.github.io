@@ -6,122 +6,34 @@
     <title>Jin Xie | Research Data Scientist</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* 1. 全局样式：复刻参考网站的克制感 */
-        :root {
-            --primary-text: #333;
-            --secondary-text: #666;
-            --border-color: #efefef;
-            --accent-color: #000;
-        }
-
+        :root { --primary-text: #333; --secondary-text: #666; --border-color: #efefef; }
         * { box-sizing: border-box; }
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background-color: #fff;
-            color: var(--primary-text);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
+        body { font-family: 'Inter', sans-serif; background-color: #fff; color: var(--primary-text); margin: 0; padding: 0; line-height: 1.6; }
         a { color: #1a73e8; text-decoration: none; transition: 0.2s; }
         a:hover { text-decoration: underline; }
 
-        /* 2. 核心布局结构 */
-        .wrapper {
-            display: flex;
-            max-width: 1050px;
-            margin: 0 auto;
-            padding: 80px 40px;
-        }
-
-        /* 左侧固定边栏 */
-        .sidebar {
-            flex: 0 0 260px;
-            position: sticky;
-            top: 80px;
-            height: fit-content;
-        }
-
-        .profile-img {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%; /* 也可以改成 8px 圆角，参考网站通常是圆的或微圆 */
-            object-fit: cover;
-            margin-bottom: 25px;
-            border: 1px solid #eee;
-        }
-
+        .wrapper { display: flex; max-width: 1050px; margin: 0 auto; padding: 80px 40px; }
+        .sidebar { flex: 0 0 260px; position: sticky; top: 80px; height: fit-content; }
+        .profile-img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; margin-bottom: 25px; border: 1px solid #eee; }
         .name { font-size: 2.2rem; font-weight: 700; margin: 0 0 10px 0; color: #000; }
         .info-item { font-size: 0.95rem; margin-bottom: 8px; color: var(--secondary-text); }
         .social-links { margin-top: 30px; }
-        .social-links a { 
-            display: block; 
-            margin-bottom: 10px; 
-            font-size: 0.95rem; 
-            color: var(--secondary-text);
-            text-decoration: none;
-        }
-        .social-links a:hover { color: #000; }
+        .social-links a { display: block; margin-bottom: 10px; font-size: 0.95rem; color: var(--secondary-text); }
 
-        /* 右侧滚动主体 */
-        .main-content {
-            flex: 1;
-            padding-left: 60px;
-        }
-
+        .main-content { flex: 1; padding-left: 60px; }
         section { margin-bottom: 60px; }
-
-        /* 复刻标题下划线样式 */
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 25px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--border-color);
-            color: #000;
-        }
-
+        h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 25px; padding-bottom: 8px; border-bottom: 1px solid var(--border-color); color: #000; }
         p { margin-bottom: 18px; font-size: 1.05rem; }
 
-        /* News 列表样式 */
-        .news-item {
-            display: flex;
-            margin-bottom: 15px;
-            font-size: 1rem;
-        }
-        .news-date {
-            min-width: 100px;
-            font-weight: 600;
-            color: #888;
-        }
+        .item { margin-bottom: 25px; }
+        .item-title { display: block; font-weight: 600; font-size: 1.1rem; margin-bottom: 4px; }
+        .item-meta { font-size: 0.95rem; color: var(--secondary-text); }
+        .me { font-weight: 700; text-decoration: underline; }
 
-        /* 项目/论文列表样式 */
-        .pub-item {
-            margin-bottom: 25px;
-        }
-        .pub-title {
-            display: block;
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 4px;
-        }
-        .pub-authors { font-size: 0.95rem; color: var(--secondary-text); }
-        .pub-venue { font-size: 0.95rem; font-weight: 500; font-style: italic; color: #444; }
-        .me { font-weight: 700; text-decoration: underline; } /* 高亮自己的名字 */
-
-        /* 3. 手机端适配：当屏幕变窄时自动切换为单栏 */
         @media (max-width: 900px) {
             .wrapper { flex-direction: column; padding: 40px 20px; }
-            .sidebar { 
-                position: static; 
-                width: 100%; 
-                text-align: center; 
-                margin-bottom: 50px; 
-            }
+            .sidebar { position: static; width: 100%; text-align: center; margin-bottom: 50px; }
             .main-content { padding-left: 0; }
-            .news-item { flex-direction: column; }
-            .news-date { margin-bottom: 4px; }
         }
     </style>
 </head>
@@ -133,7 +45,8 @@
             <h1 class="name">Jin Xie</h1>
             <div class="info-item">Research Data Scientist</div>
             <div class="info-item"><b>OpenAI</b></div>
-            <div class="info-item" style="margin-top: 15px;">Ph.D. @ Stanford</div>
+            <div class="info-item" style="margin-top: 15px;">Ph.D. in Computational Math</div>
+            <div class="info-item">Stanford University</div>
             
             <div class="social-links">
                 <a href="mailto:jinnyxie1024@gmail.com">📩 Email</a>
@@ -148,75 +61,18 @@
             <section id="biography">
                 <h2>Biography</h2>
                 <p>
-                    I am a Research Data Scientist at <b>OpenAI</b>. I recently joined OpenAI after a transformative tenure at <b>Google Gemini (Core ML Data)</b>, where I was a core contributor to <b>Gemini 2.5 and 3.0</b>. My work focuses on bridging the gap between intricate algorithms and human-aligned AI safety.
+                    I am a Research Data Scientist at <b>OpenAI</b>. Previously, I was a core contributor to the <b>Google Gemini</b> team (Core ML Data), where I worked on <b>Gemini 2.5 and 3.0</b>. My research focuses on improving data and model quality for Large Language Models (LLMs), with specific expertise in RLHF, automated evaluation, and model safety.
                 </p>
                 <p>
-                    I received my <b>Ph.D. in Computational Mathematics</b> from <b>Stanford University</b>, advised by Professors Peter Glynn and Jose Blanchet. My research expertise includes RLHF/RLAIF, automated evaluation refactoring, and frontier safety for large language models.
+                    I recently led projects involving long-context PDF understanding and frontier safety misuse detection for the Gemini 2.5 Pro launch. My work has been recognized with the 2026 DeepMind Data Science Breakthrough Team Award.
                 </p>
             </section>
 
-            <section id="news">
-                <h2>News</h2>
-                <div class="news-item">
-                    <span class="news-date">2026.05</span>
-                    <span>Received the <b>DeepMind Data Science Breakthrough Team Award</b> for the Automated Loss Pattern Analyzer project.</span>
+            <section id="education">
+                <h2>Education</h2>
+                <div class="item">
+                    <span class="item-title">Stanford University</span>
+                    <span class="item-meta">Ph.D. in Computational Mathematics, GPA: 3.97/4.3 | <i>2016 - 2021</i></span>
+                    <span class="item-meta">Advisors: Prof. Peter Glynn, Prof. Jose Blanchet</span>
                 </div>
-                <div class="news-item">
-                    <span class="news-date">2026.04</span>
-                    <span>Joined <b>OpenAI</b> as a Senior Data Scientist to work on Model Safety and Alignment.</span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2025.07</span>
-                    <span><b>Gemini 2.5</b> is out! I led the post-training evaluation for multimodal long-context capabilities.</span>
-                </div>
-            </section>
-
-            <section id="publications">
-                <h2>Selected Publications</h2>
-                
-                <div class="pub-item">
-                    <span class="pub-title">Gemini 2.5: Pushing the frontier with advanced reasoning and long context</span>
-                    <span class="pub-authors">Google Gemini Team (incl. <span class="me">Jin Xie</span>)</span><br>
-                    <span class="pub-venue">arXiv, 2025</span>
-                </div>
-
-                <div class="pub-item">
-                    <span class="pub-title">Asymptotic Analysis of the Profile Function in Distributionally Robust Optimization</span>
-                    <span class="pub-authors"><span class="me">Jin Xie</span>, Jose Blanchet, Peter Glynn</span><br>
-                    <span class="pub-venue">AAAI (Submitted), 2023</span>
-                </div>
-
-                <div class="pub-item">
-                    <span class="pub-title">Surgical Scheduling via Optimal Transport</span>
-                    <span class="pub-authors"><span class="me">Jin Xie</span>, et al.</span><br>
-                    <span class="pub-venue">Operations Research (To be submitted), 2024</span>
-                </div>
-            </section>
-
-            <section id="experience">
-                <h2>Professional Experience</h2>
-                <div class="pub-item">
-                    <span class="pub-title">OpenAI</span>
-                    <span class="pub-meta">Senior Data Scientist | <i>2026 - Present</i></span>
-                </div>
-                <div class="pub-item">
-                    <span class="pub-title">Google Gemini</span>
-                    <span class="pub-meta">Research Data Scientist | <i>2025 - 2026</i></span>
-                </div>
-            </section>
-
-            <section id="artistry">
-                <h2>Artistry & Personal</h2>
-                <p>
-                    I am a professional <b>Guzheng performer</b> (10th Grade/Performance level). My journey in music has earned me various honors in international competitions, and I often explore the intersection of classical performance and modern aesthetics.
-                </p>
-                <p>
-                    I am also active in <b>professional modeling</b> and fashion styling, bringing the same precision and discipline found in mathematics to visual storytelling.
-                </p>
-            </section>
-
-        </main>
-    </div>
-
-</body>
-</html>
+                <div class="item">
