@@ -26,7 +26,7 @@
 
         .wrapper { max-width: 900px; margin: 0 auto; padding: 80px 40px; }
         
-        /* 顶部 Header */
+        /* 顶部 Header：左文字右头像 (复刻参考图风格) */
         .header-section {
             display: flex;
             align-items: center;
@@ -59,10 +59,11 @@
             max-width: 580px;
         }
 
+        /* 链接条 */
         .link-bar { font-size: 0.85rem; font-weight: 400; margin-top: 18px; }
         .link-bar span { color: #ddd; margin: 0 6px; font-weight: 300; }
 
-        /* 内容区 */
+        /* 内容区通用样式 */
         section { margin-bottom: 45px; }
         h2 { 
             font-size: 1rem; 
@@ -84,11 +85,11 @@
         .news-item { display: flex; margin-bottom: 8px; font-size: 0.85rem; font-weight: 300; color: #444; }
         .news-date { min-width: 85px; font-weight: 500; color: #999; font-family: monospace; }
 
-        /* 左右布局容器 */
-        .flex-container { display: flex; align-items: flex-start; gap: 30px; }
-        .flex-list { flex: 1; }
+        /* Education 左右布局：文字和 Tree */
+        .edu-container { display: flex; align-items: flex-start; gap: 30px; }
+        .edu-list { flex: 1; }
         
-        /* 调整后的 Tree 样式 (150px 宽度) */
+        /* 树的大小调整为 150px */
         .academic-tree { 
             flex: 0 0 150px; 
             width: 150px;
@@ -96,15 +97,12 @@
             border-radius: 4px; 
             padding: 4px; 
             background: #fff;
-            opacity: 1;
-            transition: transform 0.3s ease;
         }
-        .academic-tree:hover { transform: scale(1.1); }
 
         @media (max-width: 800px) {
             .header-section { flex-direction: column-reverse; text-align: center; }
             .header-text { padding-right: 0; margin-top: 30px; }
-            .flex-container { flex-direction: column; }
+            .edu-container { flex-direction: column; }
             .academic-tree { align-self: center; margin-top: 20px; }
         }
     </style>
@@ -122,9 +120,9 @@
                     Previously, I held research and data roles at <a href="https://grail.com/">Grail</a>, <a href="https://www.uber.com/">Uber</a>, and <a href="https://research.facebook.com/">Facebook Research</a>.
                 </p>
                 <p class="intro-p">
-                    I earned my Ph.D. in Computational Mathematics from <a href="https://www.stanford.edu/">Stanford University</a>, advised by <a href="https://profiles.stanford.edu/peter-glynn">Peter Glynn</a> and <a href="https://profiles.stanford.edu/jose-blanchet">Jose Blanchet</a>.
+                    I earned my Ph.D. in Computational Mathematics from <a href="https://www.stanford.edu/">Stanford University</a>, where I was advised by <a href="https://profiles.stanford.edu/peter-glynn">Peter Glynn</a> and <a href="https://profiles.stanford.edu/jose-blanchet">Jose Blanchet</a>.
                 </p>
                 
                 <div class="link-bar">
                     <a href="mailto:jinnyxie1024@gmail.com">Email</a><span>/</span>
-                    <a href="Jin_Xie_Resume.pdf">CV</a><span>/</span>
+                    <a href="Jin_Xie
