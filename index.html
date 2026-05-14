@@ -26,7 +26,7 @@
 
         .wrapper { max-width: 900px; margin: 0 auto; padding: 80px 40px; }
         
-        /* 顶部两栏：左文字右头像 (复刻 Zhuoyi 风格) */
+        /* 顶部 Header */
         .header-section {
             display: flex;
             align-items: center;
@@ -47,7 +47,7 @@
 
         .name { font-size: 2rem; font-weight: 600; margin: 0 0 15px 0; color: #000; letter-spacing: -0.02em; }
         
-        /* 链接统一样式：蓝色 */
+        /* 蓝色链接 */
         a { color: var(--link-blue); text-decoration: none; }
         a:hover { text-decoration: underline; }
 
@@ -59,14 +59,11 @@
             max-width: 580px;
         }
 
-        /* 链接条 */
         .link-bar { font-size: 0.85rem; font-weight: 400; margin-top: 18px; }
         .link-bar span { color: #ddd; margin: 0 6px; font-weight: 300; }
 
         /* 内容区 */
         section { margin-bottom: 45px; }
-        
-        /* 标题：小、细、精致 */
         h2 { 
             font-size: 1rem; 
             font-weight: 600; 
@@ -78,32 +75,33 @@
 
         p { font-size: 0.88rem; font-weight: 300; color: #444; margin-bottom: 15px; text-align: justify; }
 
-        /* 列表项 */
         .item { margin-bottom: 18px; }
         .item-title { display: block; font-weight: 500; font-size: 0.9rem; margin-bottom: 2px; color: #000; }
         .item-meta { font-size: 0.82rem; color: var(--secondary-text); font-weight: 300; }
         .me { font-weight: 600; text-decoration: underline; color: #000; }
         
-        /* News 列表 */
         .news-list { list-style: none; padding: 0; }
         .news-item { display: flex; margin-bottom: 8px; font-size: 0.85rem; font-weight: 300; color: #444; }
         .news-date { min-width: 85px; font-weight: 500; color: #999; font-family: monospace; }
 
-        /* Experience 左右布局，放置 Academic Tree */
-        .exp-container { display: flex; align-items: flex-start; gap: 30px; }
-        .exp-list { flex: 1; }
+        /* 左右布局容器 (用于 Education) */
+        .flex-container { display: flex; align-items: flex-start; gap: 30px; }
+        .flex-list { flex: 1; }
+        
+        /* 缩小到 1/4 的 Tree 样式 */
         .academic-tree { 
-            flex: 0 0 240px; 
+            flex: 0 0 120px; /* 1/2 宽度 = 1/4 面积 */
             border: 1px solid #f7f7f7; 
             border-radius: 4px; 
             padding: 4px; 
             background: #fff;
+            opacity: 0.9;
         }
 
         @media (max-width: 800px) {
             .header-section { flex-direction: column-reverse; text-align: center; }
             .header-text { padding-right: 0; margin-top: 30px; }
-            .exp-container { flex-direction: column; }
+            .flex-container { flex-direction: column; }
             .academic-tree { align-self: center; margin-top: 20px; }
         }
     </style>
@@ -115,13 +113,13 @@
             <div class="header-text">
                 <h1 class="name">Jin Xie</h1>
                 <p class="intro-p">
-                    I am a Research Data Scientist at <a href="https://about.google/">Google</a> (Core ML Data), where I focus on <b>Gemini</b> post-training, frontier safety, and automated evaluation frameworks. 
+                    I am a Research Data Scientist at <a href="https://about.google/">Google</a> (Core ML Data), focusing on <b>Gemini</b> post-training, frontier safety, and automated evaluation frameworks. 
                 </p>
                 <p class="intro-p">
-                    Previously, I held machine learning and research roles at <a href="https://grail.com/">Grail</a>, <a href="https://www.uber.com/">Uber</a>, and <a href="https://research.facebook.com/">Facebook Research</a>.
+                    Previously, I held research and data roles at <a href="https://grail.com/">Grail</a>, <a href="https://www.uber.com/">Uber</a>, and <a href="https://research.facebook.com/">Facebook Research</a>.
                 </p>
                 <p class="intro-p">
-                    I earned my Ph.D. in Computational Mathematics from <a href="https://www.stanford.edu/">Stanford University</a>, where I was advised by <a href="https://profiles.stanford.edu/peter-glynn">Peter Glynn</a> and <a href="https://profiles.stanford.edu/jose-blanchet">Jose Blanchet</a>.
+                    I earned my Ph.D. in Computational Mathematics from <a href="https://www.stanford.edu/">Stanford University</a>, advised by <a href="https://profiles.stanford.edu/peter-glynn">Peter Glynn</a> and <a href="https://profiles.stanford.edu/jose-blanchet">Jose Blanchet</a>.
                 </p>
                 
                 <div class="link-bar">
@@ -144,7 +142,7 @@
             <section id="about">
                 <h2>About</h2>
                 <p>
-                    My work involves scaling high-fidelity evaluation and safety protocols for frontier models. As a core contributor to <b>Gemini 2.5 and 3.0</b>, I lead automated loss pattern analysis and evaluation refactors. I received the <b>2026 DeepMind Data Science Breakthrough Team Award</b> for developing real-time noise identification systems for model ratings.
+                    My research focuses on the intersection of scale and safety for large language models. As a core contributor to <b>Gemini 2.5 and 3.0</b>, I lead automated loss pattern analysis and evaluation refactors. I received the <b>2026 DeepMind Data Science Breakthrough Team Award</b> for my work on real-time noise identification.
                 </p>
             </section>
 
@@ -152,41 +150,40 @@
                 <h2>News</h2>
                 <ul class="news-list">
                     <li class="news-item"><span class="news-date">[2026.05]</span> Awarded the <b>DeepMind Data Science Breakthrough Team Award</b> at Google.</li>
-                    <li class="news-item"><span class="news-date">[2025.07]</span> <b>Gemini 2.5</b> released; led the post-train eval for long-context capabilities.</li>
-                    <li class="news-item"><span class="news-date">[2019.11]</span> <b>First Place</b> in the Stanford Citadel Datathon (Top 1% of candidates).</li>
+                    <li class="news-item"><span class="news-date">[2025.07]</span> <b>Gemini 2.5</b> released; led the post-training eval for long-context capabilities.</li>
                 </ul>
             </section>
 
             <section id="education">
                 <h2>Education</h2>
-                <div class="item">
-                    <span class="item-title">Stanford University</span>
-                    <span class="item-meta">Ph.D. in Computational Mathematics | 2016 - 2021</span>
-                </div>
-                <div class="item">
-                    <span class="item-title">Peking University</span>
-                    <span class="item-meta">B.S. in Applied Mathematics | 2012 - 2016</span>
+                <div class="flex-container">
+                    <div class="flex-list">
+                        <div class="item">
+                            <span class="item-title">Stanford University</span>
+                            <span class="item-meta">Ph.D. in Computational Mathematics, GPA: 3.97/4.3 | 2016 - 2021</span>
+                        </div>
+                        <div class="item">
+                            <span class="item-title">Peking University</span>
+                            <span class="item-meta">B.S. in Applied Mathematics | 2012 - 2016</span>
+                        </div>
+                    </div>
+                    <img src="tree.jpg" alt="Academic Tree" class="academic-tree">
                 </div>
             </section>
 
             <section id="experiences">
                 <h2>Experiences</h2>
-                <div class="exp-container">
-                    <div class="exp-list">
-                        <div class="item">
-                            <span class="item-title">Google (Core ML Data)</span>
-                            <span class="item-meta">Research Data Scientist | 2025 - Present</span>
-                        </div>
-                        <div class="item">
-                            <span class="item-title">Grail, LLC</span>
-                            <span class="item-meta">Machine Learning Scientist | 2022 - 2024</span>
-                        </div>
-                        <div class="item">
-                            <span class="item-title">Uber Technologies</span>
-                            <span class="item-meta">Data Scientist, Driver Pricing | 2021 - 2022</span>
-                        </div>
-                    </div>
-                    <img src="tree.jpg" alt="Academic Tree" class="academic-tree">
+                <div class="item">
+                    <span class="item-title">Google (Core ML Data)</span>
+                    <span class="item-meta">Research Data Scientist | 2025 - Present</span>
+                </div>
+                <div class="item">
+                    <span class="item-title">Grail, LLC</span>
+                    <span class="item-meta">Machine Learning Scientist | 2022 - 2024</span>
+                </div>
+                <div class="item">
+                    <span class="item-title">Uber Technologies</span>
+                    <span class="item-meta">Data Scientist | 2021 - 2022</span>
                 </div>
             </section>
 
@@ -194,31 +191,23 @@
                 <h2>Publications</h2>
                 <div class="item">
                     <span class="item-title">Gemini 2.5: Pushing the frontier with advanced reasoning and long context</span>
-                    <span class="item-meta">Google Gemini Team (incl. <span class="me">Jin Xie</span>) | <i>arXiv</i>, 2025</span>
+                    <span class="item-meta">Google Gemini Team (incl. <span class="me">Jin Xie</span>) | arXiv, 2025</span>
                 </div>
                 <div class="item">
                     <span class="item-title">A model to estimate bed demand for COVID-19 related hospitalization</span>
-                    <span class="item-meta">T Zhang, K McFarlane, J Vallon, L Yang, <span class="me">J Xie</span>, et al. | <i>HMPI</i>, 2020</span>
-                </div>
-                <div class="item">
-                    <span class="item-title">The Design of a Broadly Applicable Algorithm for Surgical Scheduling</span>
-                    <span class="item-meta"><span class="me">Jin Xie</span>, et al. | <i>CORR / arXiv</i>, 2022</span>
+                    <span class="item-meta">Health Management, Policy and Innovation, 2020</span>
                 </div>
             </section>
 
             <section id="honors">
                 <h2>Honors & Awards</h2>
                 <div class="item">
-                    <span class="item-title">DeepMind Data Science Breakthrough Team Award</span>
-                    <span class="item-meta">Google, 2026</span>
+                    <span class="item-title">First Place in Stanford Citadel Datathon</span>
+                    <span class="item-meta">Top 1% of candidates, 2019</span>
                 </div>
                 <div class="item">
                     <span class="item-title">Bronze Medal in the 6th S.T.Yau College Student Mathematics Contest</span>
                     <span class="item-meta">2016</span>
-                </div>
-                <div class="item">
-                    <span class="item-title">First Prize in National College Student Physics Olympics, China</span>
-                    <span class="item-meta">2014</span>
                 </div>
             </section>
 
@@ -234,14 +223,14 @@
                 <h2>Academic Services</h2>
                 <div class="item">
                     <span class="item-title">Reviewer</span>
-                    <span class="item-meta">Management Science, NeurIPS, AISTATS, AAAI, IEEE CDC.</span>
+                    <span class="item-meta">Management Science, NeurIPS, AISTATS, IEEE CDC, AAAI.</span>
                 </div>
             </section>
 
             <section id="misc">
                 <h2>Misc</h2>
                 <p>
-                    Professional <b>Guzheng performer</b> (10th grade). Advanced <b>skier</b> (double black diamond level). I also enjoy ballet, swimming, and yoga.
+                    Professional <b>Guzheng performer</b> (10th grade). Advanced <b>skier</b> (double black diamond level). Practitioner of ballet, swimming, and yoga.
                 </p>
             </section>
 
