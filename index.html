@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jin | Researcher, Data Scientist & Artist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --text-color: #1a1a1a; --meta-color: #666; --link-underline: #ccc; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--text-color); max-width: 800px; margin: 100px auto; padding: 0 30px; background: #fff; }
+        
+        /* Typography */
+        h1 { font-family: 'Libre Baskerville', serif; font-weight: 400; font-size: 2.8rem; margin-bottom: 1rem; }
+        .serif { font-family: 'Libre Baskerville', serif; font-style: italic; color: var(--meta-color); font-size: 1.2rem; }
+        h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.15em; color: #888; margin-top: 60px; margin-bottom: 25px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
+        
+        /* Layout */
+        .intro { margin-bottom: 60px; }
+        .nav { margin-bottom: 80px; }
+        .nav a { text-decoration: none; color: var(--meta-color); margin-right: 25px; font-size: 0.9rem; transition: color 0.2s; }
+        .nav a:hover { color: var(--text-color); }
+        
+        .item { margin-bottom: 25px; }
+        .item-title { font-weight: 600; display: block; }
+        .item-meta { font-size: 0.9rem; color: var(--meta-color); }
+        .highlight { font-weight: 600; color: #4f46e5; } /* 强调奖项 */
+
+        /* Links */
+        a { color: inherit; text-decoration: underline; text-decoration-color: var(--link-underline); text-underline-offset: 4px; transition: all 0.2s; }
+        a:hover { text-decoration-color: var(--text-color); }
+
+        .news-list { list-style: none; padding: 0; font-size: 0.95rem; }
+        .news-list li { margin-bottom: 10px; }
+        .news-date { color: #999; width: 100px; display: inline-block; font-family: monospace; }
+
+        @media (max-width: 600px) { body { margin: 50px auto; } h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#art">Artistry</a>
+        <a href="https://www.linkedin.com/in/jin-x-697a3b129/">LinkedIn</a>
+    </nav>
+
+    <header class="intro" id="about">
+        <h1>Jin.</h1>
+        <p class="serif">Researcher, Guzheng Performer, Aestheticist.</p>
+        <p>
+            I am a <b>Research Data Scientist</b>[cite: 2]. My work focuses on <b>LLM Safety</b>, <b>RLHF/RLAIF</b>, and automated evaluation frameworks[cite: 39, 155]. 
+            I currently lead initiatives at the intersection of intricate algorithms and model alignment[cite: 35, 36, 119].
+        </p>
+        <p>
+            I hold a <b>Ph.D. in Computational Mathematics</b> from <b>Stanford University</b>  and a B.S. from <b>Peking University</b>[cite: 17]. 
+            My research is driven by the goal of scaling superalignment safely[cite: 138, 169].
+        </p>
+    </header>
+
+    <section id="news">
+        <h2>News</h2>
+        <ul class="news-list">
+            <li><span class="news-date">2026.05</span> Received the <b>DeepMind Data Science Breakthrough Team Award</b>[cite: 39].</li>
+            <li><span class="news-date">2025.07</span> <b>Gemini 2.5</b> released; recognized as a core contributor to post-training and evaluation[cite: 21, 38].</li>
+            <li><span class="news-date">2025.05</span> Presented "Automated Loss Pattern Analysis" at <b>Google DataVerse Summit</b>[cite: 40].</li>
+        </ul>
+    </section>
+
+    <section id="research">
+        <h2>Selected Research & Experience</h2>
+        
+        <div class="item">
+            <span class="item-title">Gemini 2.5: Pushing the Frontier</span>
+            <span class="item-meta">Google Gemini Team. <i>arXiv, 2025</i>[cite: 22]. Lead for long-context PDF understanding eval[cite: 38].</span>
+        </div>
+
+        <div class="item">
+            <span class="item-title">Automated Loss Pattern Analyzer</span>
+            <span class="item-meta">Developed an end-to-end framework for mining model regression patterns in multimodal LLMs[cite: 139, 150].</span>
+        </div>
+
+        <div class="item">
+            <span class="item-title">Frontier Safety: Dangerous Misuse Detection</span>
+            <span class="item-meta">Architected a high-recall, high-efficiency L1 autorater for misuse detection pipelines[cite: 39, 162].</span>
+        </div>
+
+        <div class="item">
+            <span class="item-title">Surgical Scheduling via Optimal Transport</span>
+            <span class="item-meta">Ph.D. Thesis & Research with Stanford Medicine. <i>Operations Research (to be submitted)</i>[cite: 23, 26].</span>
+        </div>
+    </section>
+
+    <section id="art">
+        <h2>Artistry & Honors</h2>
+        <div class="item">
+            <span class="item-title">Guzheng Performance</span>
+            <span class="item-meta">Professional Guzheng soloist; former Vice President of the Stanford Oriental Zither & Qin Association[cite: 82].</span>
+        </div>
+        <div class="item">
+            <span class="item-title">Fashion & Modeling</span>
+            <span class="item-meta">Exploring the aesthetic synergy between technology and minimalist editorial design.</span>
+        </div>
+        <div class="item">
+            <span class="item-title">Citadel Datathon Champion</span>
+            <span class="item-meta">First Place, Stanford Citadel Datathon (Top 1% of candidates)[cite: 88].</span>
+        </div>
+    </section>
+
+    <footer style="margin-top: 100px; padding-bottom: 50px; font-size: 0.8rem; color: #ccc;">
+        <p>© 2026 Jin. Built with a focus on simplicity and precision.</p>
+    </footer>
+
+</body>
+</html>
